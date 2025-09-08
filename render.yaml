@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: gbtnetwork-node
+    env: docker
+    plan: starter # change to pro for production
+    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: CHAIN_ID
+        value: "999"
+      - key: RPC_PORT
+        value: "9636"
+      - key: COINBASE
+        value: "0xa6a98c491Ede0A953670350d9304dc838B171d1E"
+    ports:
+      - 9636
+    autoDeploy: true
