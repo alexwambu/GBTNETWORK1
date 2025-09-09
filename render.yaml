@@ -5,7 +5,7 @@ services:
     plan: starter # change to pro for production
     dockerfilePath: ./Dockerfile
     buildCommand: ""
-    startCommand: ""
+    startCommand: "./start-node.sh"
     envVars:
       - key: CHAIN_ID
         value: "999"
